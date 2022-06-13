@@ -9,3 +9,6 @@ end
 optimization case studies.
 * PART 3: is concerned with interesting practical applications of machine learning knowl-
 edge. 
+#Required softwares to access this project files
+* WEKA for data mining and machine learning
+* MATLAB for optimization problems 
