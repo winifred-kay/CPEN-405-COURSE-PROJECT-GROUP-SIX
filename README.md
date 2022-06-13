@@ -11,3 +11,8 @@ optimization case studies.
 # Required softwares to access this project files
 * WEKA for data mining and machine learning
 * MATLAB for optimization problems 
+# Insights on each part of the project
+* PART 1 
+This part entails the use of the WEKA software to analyse, classify and draw conclusion using a selected dataset from the UCI Machine Learning Repository. It involves the use of classification algorithms such as the Naive Bayes, decision trees, Logistic regression etc to perform data mining task and draw analysis on a dataset.
+* PART 2
+* PART 3
