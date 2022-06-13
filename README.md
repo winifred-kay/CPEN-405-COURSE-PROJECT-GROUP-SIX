@@ -7,8 +7,7 @@ and game theory to solve certain real life problems. The project is divided into
 end
 * PART 2: involves the use of MATLAB and other software if necessary, to solve real-life
 optimization case studies.
-* PART 3: is concerned with interesting practical applications of machine learning knowl-
-edge. 
+* PART 3: is concerned with interesting practical applications of machine learning knowledge. 
 # Required softwares to access this project files
 * WEKA for data mining and machine learning
 * MATLAB for optimization problems 
