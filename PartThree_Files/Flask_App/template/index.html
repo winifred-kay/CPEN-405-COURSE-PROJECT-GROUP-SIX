@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.min.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <title>Heart Disease Prediction</title>
+  </head>
+  <body>
+  
+
+  <div class="content">
+    
+    <div class="container">
+
+      
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          
+          <div class="row align-items-center">
+            <div class="col-lg-7 mb-5 mb-lg-0">
+
+              <h2 class="mb-5">Know your heart's condition.</h2>
+
+              <form class="border-right pr-5 mb-5" action="diagnosis" method="post">
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="age" name="age" placeholder="Age" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="sex" name="sex" placeholder="Sex(0-male, 1-female)" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="cp" name="cp" placeholder="Chest Pain Type" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="rbsg" name="rbsg" placeholder="Resting Blood Sugar" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="chol" name="chol" placeholder="Serum Cholestoral" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="fbsg" name="fbsg" placeholder="Fasting Blood Sugar" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="restecg" name="restecg" placeholder="Rest ECG" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="thalach" name="thalach" placeholder="Max Heart Rate Achieved" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="exang" name="exang" placeholder="Exercise Induced Angina" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="oldpeak" name="oldpeak" placeholder="Old Peak" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="slope" name="slope" placeholder="Slope" required>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <input type="number" class="form-control" id="ca" name="ca" placeholder="No of Major Vessels" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 form-group">
+                    <input type="number" class="form-control" id="thal" name="thal" placeholder="Thal" required>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <input type="submit" value="Check results" class="btn btn-primary rounded-0 py-2 px-4">
+                    <span class="submitting"></span>
+                  </div>
+                </div>
+              </form>
+
+              <div id="form-message-warning mt-4"></div> 
+              <div id="form-message-success">
+                Your message was sent, thank you!
+              </div>
+
+            </div>
+            
+            <div class="col-lg-4 ml-auto">
+              {% for message in get_flashed_messages() %}
+                <h3 class="mb-4">{{message}}</h3>
+              {% endfor %}
+              <p>According to the latest WHO data published in 2020 Coronary Heart Disease Deaths in Ghana reached 14,103 or 8.06% of total deaths. Always remember to eat healthy, exercise regularly and frequently go for check ups.</p>
+              <p><a href="https://www.who.int/health-topics/cardiovascular-diseases#tab=tab_1">Read more</a></p>
+            </div>
+          </div>
+        </div>  
+        </div>
+      </div>
+  </div>
+    
+    
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
